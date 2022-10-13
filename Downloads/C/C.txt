@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+
+
+    /*
+    Este código funciona como uma simples calculadora aritmética, realizando operações de soma (+), subtração (-), multiplicação (*), divisão (/), potencialização (^) e raiz quadrada (r).
+    Meu usuário do GitHub é LucaVR20.
+    */
+
+
+	char op;
+	float n1, n2;
+	double pot, rai;
+
+
+	printf("\nAutor: Luca Vicente Rodrigues\nCurso: Tecnologia Análise e Desenvolvimento de Sistemas\nUniversidade: Universidade LaSalle Niterói\nMatrícula: 202212476\n");
+
+
+	printf("\nDigite o operator matemático desejado (+, -, *, /, ^ ou r) : ");
+	scanf("%c", &op);
+
+	if (op == '+')
+	{
+		printf("Digite o primeiro valor para realizar a operação: \n");
+		scanf("%f", &n1);
+
+		printf("Digite o segundo valor para realizar a operação: \n");
+		scanf("%f", &n2);
+
+		printf("O resultado é:" "%f", n1 + n2);
+	}
+
+	if (op == '-')
+	{
+		printf("Digite o primeiro valor para realizar a operação: \n");
+		scanf("%f", &n1);
+
+		printf("Digite o segundo valor para realizar a operação: \n");
+		scanf("%f", &n2);
+
+		printf("O resultado é:" "%f", n1 - n2);
+	}
+
+	if (op == '*')
+	{
+		printf("Digite o primeiro valor para realizar a operação: \n");
+		scanf("%f", &n1);
+
+		printf("Digite o segundo valor para realizar a operação: \n");
+		scanf("%f", &n2);
+
+		printf("O resultado é:" "%f", n1 * n2);
+	}
+
+	if (op == '/')
+	{
+		printf("Digite o primeiro valor para realizar a operação: \n");
+		scanf("%f", &n1);
+
+		printf("Digite o segundo valor para realizar a operação: \n");
+		scanf("%f", &n2);
+
+		if (n1 == 0)
+		{
+			printf("Não foi possível realizar uma divisão com o valor 0, por favor tente novamente.\n");
+		}
+
+		if (n2 == 0)
+		{
+			printf("Não foi possível realizar uma divisão com o valor 0, por favor tente novamente.\n");
+		}
+
+		else
+		{
+			printf("O resultado é:" "%f", n1 / n2);
+		}
+	}
+
+	if (op == '^')
+	{
+		printf("Digite o valor que deverá ser potencializado: \n");
+		scanf("%f", &n1);
+
+		printf("Digite o valor da potência: \n");
+		scanf("%f", &n2);
+
+        pot = (pow(n1, n2));
+
+		printf("O resultado é:" "%lf", pot);
+	}
+
+	if (op == 'r')
+	{
+		printf("Digite o valor do qual deseja saber a raiz quadrada: \n");
+		scanf("%f", &n1);
+
+        rai = (sqrt(n1));
+
+		printf("O resultado é:" "%lf", rai);
+	}
+
+
+return 0;
+}
